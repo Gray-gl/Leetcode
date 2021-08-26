@@ -1,2 +1,2 @@
 # Leetcode
-all the code of the leetcode that I did
+This repository save all the code of the leetcode that I did.
