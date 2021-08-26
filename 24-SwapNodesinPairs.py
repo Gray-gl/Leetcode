@@ -23,36 +23,7 @@ struct ListNode {
 class Solution {
 public:
 
-    /*
-     * 描述：交换对应序列的两个结点，并将交换之后的链表返回
-     * 参数：head是指头结点
-     *      k是需要交换的结点的序列
-     * 返回：交换之后的链表的头节点
-     * 原理：找到两个目标节点，然后进行交换值
-     */
-    ListNode* swapNodes(ListNode* head, int k) {
-
-        //找到目标结点，初始化两个指针，用于搜寻目标节点
-        ListNode* left = head;
-        ListNode* right;
-
-        //左边的结点，是当前的结点
-        for (int i = 1; i < k; ++i) {
-            left = left->next;
-        }
-
-        //右边的结点的前一个结点
-        right =  findLastNode(head,k);
-
-        //交换对应的值
-        int temp = left->val;
-        left->val = right->next->val;
-        right->next->val = temp;
-
-        //返回最终结果
-        return head;
-    }
-
+   
     /*
      * 描述：两两交换链表的连续的两个结点
      * 参数：head是对应的链表的头节点
